@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Question
+{% endblock title %}
+
+{% block main %}
+    <form action="/answer" method="post">
+        <fieldset>
+            <legend>{{ question.question }}</legend>
+            {% for choice in question.choices %}
+            <label>
+                {{ choice }}
+                <input required value="{{ choice }}" type="radio" name="answer">
+            </label>
+            {% endfor %}
+        </fieldset>
+        <input type="submit" value="Enter">
+    </form>
+
+{% endblock main %}
