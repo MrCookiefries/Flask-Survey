@@ -10,7 +10,7 @@
         <summary>Instructions</summary>
         {{ survey.instructions }}
     </details>
-    <a href="/questions/0">
-        <button>Start</button>
-    </a>
+    <form action="/start" method="post">
+        <input type="submit" value="Start">
+    </form>
 {% endblock main %}
